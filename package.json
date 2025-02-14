@@ -1,7 +1,7 @@
 {
   "name": "node-express-vite-api",
   "version": "0.0.1",
-  "description": "NodeJs + ExpressJs + ViteJs API",
+  "description": "NodeJs + ExpressJs + ViteJs RESTful API",
   "private": true,
   "type": "module",
   "scripts": {
