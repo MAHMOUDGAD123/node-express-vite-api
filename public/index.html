@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./node.svg" type="image/x-icon" />
-    <title>NODE - VITE - Express</title>
+    <title>NODE - Express - VITE</title>
     <style>
       * {
         box-sizing: border-box;
@@ -41,6 +41,11 @@
       img {
         width: 100%;
         display: block;
+        transition: filter 500ms;
+
+        &.has-shadow:hover {
+          filter: drop-shadow(0 0 90px var(--col));
+        }
       }
 
       h2 {
@@ -52,7 +57,6 @@
 
       .express-img {
         height: 200px;
-        filter: drop-shadow(0 0 100px dodgerblue);
       }
 
       .imgs {
@@ -64,14 +68,6 @@
         & > * {
           max-width: 150px;
           min-width: 100px;
-          transition: filter 500ms;
-
-          &:nth-child(1):hover {
-            filter: drop-shadow(0 0 90px #8ac74e);
-          }
-          &:nth-child(2):hover {
-            filter: drop-shadow(0 0 90px #fcc723);
-          }
         }
       }
 
@@ -97,21 +93,34 @@
     </style>
   </head>
   <body>
-    <img
-      class="express-img"
-      src="./expressJS.svg"
-      alt="ExpressJs"
-      loading="eager"
-      fetchpriority="high"
-    />
+    <a href="https://expressjs.com/" target="_blank">
+      <img
+        class="express-img has-shadow"
+        style="--col: #1e90ff"
+        src="./expressJS.svg"
+        alt="ExpressJs"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </a>
 
     <div class="imgs">
       <a href="https://nodejs.org/en" target="_blank">
-        <img src="./nodejs.svg" alt="nodejs" />
+        <img
+          src="./nodejs.svg"
+          alt="nodejs"
+          style="--col: #8cc84b"
+          class="has-shadow"
+        />
       </a>
 
       <a href="https://vite.dev/" target="_blank">
-        <img src="./vite.svg" alt="vitejs" />
+        <img
+          src="./vite.svg"
+          alt="vitejs"
+          style="--col: #ffd52d"
+          class="has-shadow"
+        />
       </a>
     </div>
 
